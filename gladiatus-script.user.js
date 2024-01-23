@@ -13,25 +13,51 @@
 // @resource     customCSS_global  https://raw.githubusercontent.com/JesusKrists/gladiatus-script/master/global.css
 // ==/UserScript==
 
-
+//↓ - Definēt funkciju ar nosaukumu "RaiseToPower", kura pieņem vienu parametru ar nosaukumu "numberToRaise".
+//Šo funkciju varēs pasaukt tālāk programmā bezgalīgi daudz reizes
 function RaiseToPower(numberToRaise) {
     let result = numberToRaise * numberToRaise;
 
     return result;
 }
 
-(function() {
-    'use strict';
+(function () {
+    "use strict";
 
     // Variables (Mainīgie)
     let myString = "Hello world!"; // String
     let myInt = 10; // Integer
     let myFloat = 10.5; // Float
 
+    // Definē mainīgo ar nosaukumu "myValue" un piešķir vērtību no funkcijas sauciena "RaiseToPower", kuram padod argumentu "myInt"
     let myValue = RaiseToPower(myInt);
 
-})();
+    // print myValue to the console
+    console.log(myValue);
+    console.log(myString);
 
+    if (myInt == 10) {
+    } else {
+    }
+
+    // Nodefinē mainīgo ar nosaukumu "Nice", piešķir mainīgajam vērtību 69.
+    // Veic salīdzināšanu šim mainīgajam pret vērtību 69 un ja tā salīdzināšana ir patiesa, tad izprintē konsolē "Dude nice"
+    // Citādāk izprintē "Not nice"
+    let nice = 68;
+
+    // nomaini mainīgā ar nosaukumu "nice" vērtību uz 69
+    nice = 69;
+
+    if (nice == 69) {
+        console.log("Dude nice");
+    } else {
+        console.log("Not nice");
+    }
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
+})();
 
 // (function() {
 //     'use strict';
@@ -42,12 +68,12 @@ function RaiseToPower(numberToRaise) {
 //         const globalCSS = GM_getResourceText("customCSS_global");
 //         GM_addStyle(globalCSS);
 //     };
-    
+
 //     addCustomCSS();
 
 //     /*****************
 //     *     Global     *
-//     *****************/  
+//     *****************/
 
 //     const assetsUrl = 'https://raw.githubusercontent.com/ebodziony/gladiatus-script/master/assets';
 
@@ -104,7 +130,7 @@ function RaiseToPower(numberToRaise) {
 //     };
 
 //     // Dungeon
-    
+
 //     let doDungeon = true;
 //     if (localStorage.getItem('doDungeon')) {
 //         doDungeon = localStorage.getItem('doDungeon') === "true" ? true : false;
@@ -151,7 +177,7 @@ function RaiseToPower(numberToRaise) {
 //     if (!document.getElementById("submenu2").getElementsByClassName("menuitem glow")[0]){
 //         doEventExpedition = false;
 //     };
-    
+
 //     let eventMonsterId = 0;
 //     if (localStorage.getItem('eventMonsterId')) {
 //         eventMonsterId = Number(localStorage.getItem('eventMonsterId'));
@@ -613,7 +639,7 @@ function RaiseToPower(numberToRaise) {
 
 //             $('#quests_settings').addClass(doQuests ? 'active' : 'inactive');
 //             $(`#do_quests_${doQuests}`).addClass('active');
-            
+
 //             for (const type in questTypes) {
 //                 if (questTypes[type]) {
 //                     $(`#do_${type}_quests`).addClass('active');
@@ -802,7 +828,7 @@ function RaiseToPower(numberToRaise) {
 //                         if (url.includes('8aada67d4c5601e009b9d2a88f478c')) {
 //                             return 'combat';
 //                         }
-                        
+
 //                         if (url.includes('00f1a594723515a77dcd6d66c918fb')) {
 //                             return 'arena';
 //                         }
@@ -838,10 +864,10 @@ function RaiseToPower(numberToRaise) {
 //                         if (questTypes[icon]) {
 //                             return quest.getElementsByClassName("quest_slot_button_accept")[0].click();
 //                         };
-//                     }           
+//                     }
 
 //                     $("#quest_footer_reroll input").first().click()
-//                 }  
+//                 }
 
 //                 checkNextQuestTime();
 //             }
@@ -878,7 +904,7 @@ function RaiseToPower(numberToRaise) {
 
 //                 if (!inExpeditionPage || inEventExpeditionPage) {
 //                     document.getElementsByClassName("cooldown_bar_link")[0].click();
-//                 } else { 
+//                 } else {
 //                     document.getElementsByClassName("expedition_button")[monsterId].click();
 //                 };
 //             };
@@ -936,7 +962,7 @@ function RaiseToPower(numberToRaise) {
 
 //                     if (!inArenaProvPage) {
 //                         document.getElementById("mainnav").getElementsByTagName("td")[1].firstElementChild.click();
-//                     } else { 
+//                     } else {
 //                         const levels = new Array();
 //                         levels[0] = Number(document.getElementById("own2").getElementsByTagName("td")[1].firstChild.nodeValue)
 //                         levels[1] = Number(document.getElementById("own2").getElementsByTagName("td")[5].firstChild.nodeValue)
@@ -953,7 +979,7 @@ function RaiseToPower(numberToRaise) {
 //                         } else {
 //                             opponentIndex = getRandomIntIndex(levels)
 //                         }
-                
+
 //                         document.getElementsByClassName("attack")[opponentIndex].click();
 //                     }
 //                 }
@@ -980,7 +1006,7 @@ function RaiseToPower(numberToRaise) {
 
 //                     if (!inCircusProvPage) {
 //                         document.getElementById("mainnav").getElementsByTagName("td")[3].firstElementChild.click();
-//                     } else { 
+//                     } else {
 //                         const levels = new Array();
 //                         levels[0] = Number(document.getElementById("own3").getElementsByTagName("td")[1].firstChild.nodeValue)
 //                         levels[1] = Number(document.getElementById("own3").getElementsByTagName("td")[5].firstChild.nodeValue)
@@ -1048,7 +1074,7 @@ function RaiseToPower(numberToRaise) {
 
 //                         document.getElementsByClassName("expedition_button")[eventMonsterId].click();
 //                     }
-//                 }                
+//                 }
 //             };
 
 //             setTimeout(function(){
@@ -1069,7 +1095,7 @@ function RaiseToPower(numberToRaise) {
 
 //             if (safeMode === false) {
 //                 const actions = [];
-    
+
 //                 if (doExpedition === true) {
 //                     const timeTo = convertTimeToMs(document.getElementById("cooldown_bar_text_expedition").innerText);
 
@@ -1136,7 +1162,7 @@ function RaiseToPower(numberToRaise) {
 //                 const nextAction = getNextAction(actions);
 
 //                 // @TODO fix nextAction if !actions.length
-    
+
 //                 function formatTime(timeInMs) {
 //                     if (timeInMs < 1000) {
 //                         return "0:00:00"
@@ -1154,12 +1180,12 @@ function RaiseToPower(numberToRaise) {
 //                         mins = "0" + mins;
 //                     };
 //                     let hrs = (timeInSecs - mins) / 60;
-    
+
 //                     return hrs + ':' + mins + ':' + secs;
 //                 };
 
 //                 var nextActionWindow = document.createElement("div");
-    
+
 //                 function showNextActionWindow() {
 //                     nextActionWindow.setAttribute("id", "nextActionWindow")
 //                     nextActionWindow.setAttribute("style", `
@@ -1188,16 +1214,16 @@ function RaiseToPower(numberToRaise) {
 //                 showNextActionWindow();
 
 //                 let nextActionCounter;
-    
+
 //                 nextActionCounter = setInterval(function() {
 //                     nextAction.time = nextAction.time - 1000;
-    
+
 //                     nextActionWindow.innerHTML = `
 //                         <span style="color: #fff;">${content.nextAction}: </span>
 //                         <span>${content[nextAction.name]}</span></br>
 //                         <span style="color: #fff;">${content.in}: </span>
 //                         <span>${formatTime(nextAction.time)}</span>`;
-    
+
 //                     if (nextAction.time <= 0) {
 //                         if (nextAction.index === 4) {
 //                             document.getElementById("submenu2").getElementsByClassName("menuitem glow")[0].click();
