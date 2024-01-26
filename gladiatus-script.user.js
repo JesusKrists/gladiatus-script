@@ -21,42 +21,61 @@ function RaiseToPower(numberToRaise) {
     return result;
 }
 
+function Main() {
+    let elements = document.getElementsByClassName("advanced_menu_entry");
+
+    for (let i = 0; i < elements.length; i++) {
+        let innerElements = elements[i].getElementsByClassName("menuitem");
+
+        for (let j = 0; j < innerElements.length; j++) {
+            console.log(innerElements[j].innerHTML);
+        }
+    }
+}
+
 (function () {
     "use strict";
 
-    // Variables (Mainīgie)
-    let myString = "Hello world!"; // String
-    let myInt = 10; // Integer
-    let myFloat = 10.5; // Float
+    // // Variables (Mainīgie)
+    // let myString = "Hello world!"; // String
+    // let myInt = 10; // Integer
+    // let myFloat = 10.5; // Float
 
-    // Definē mainīgo ar nosaukumu "myValue" un piešķir vērtību no funkcijas sauciena "RaiseToPower", kuram padod argumentu "myInt"
-    let myValue = RaiseToPower(myInt);
+    // // Definē mainīgo ar nosaukumu "myValue" un piešķir vērtību no funkcijas sauciena "RaiseToPower", kuram padod argumentu "myInt"
+    // let myValue = RaiseToPower(myInt);
 
-    // print myValue to the console
-    console.log(myValue);
-    console.log(myString);
+    // // print myValue to the console
+    // console.log(myValue);
+    // console.log(myString);
 
-    if (myInt == 10) {
-    } else {
-    }
+    // if (myInt == 10) {
+    // } else {
+    // }
 
-    // Nodefinē mainīgo ar nosaukumu "Nice", piešķir mainīgajam vērtību 69.
-    // Veic salīdzināšanu šim mainīgajam pret vērtību 69 un ja tā salīdzināšana ir patiesa, tad izprintē konsolē "Dude nice"
-    // Citādāk izprintē "Not nice"
-    let nice = 68;
+    // // Nodefinē mainīgo ar nosaukumu "Nice", piešķir mainīgajam vērtību 69.
+    // // Veic salīdzināšanu šim mainīgajam pret vērtību 69 un ja tā salīdzināšana ir patiesa, tad izprintē konsolē "Dude nice"
+    // // Citādāk izprintē "Not nice"
+    // let nice = 68;
 
-    // nomaini mainīgā ar nosaukumu "nice" vērtību uz 69
-    nice = 69;
+    // // nomaini mainīgā ar nosaukumu "nice" vērtību uz 69
+    // nice = 69;
 
-    if (nice == 69) {
-        console.log("Dude nice");
-    } else {
-        console.log("Not nice");
-    }
+    // if (nice == 69) {
+    //     console.log("Dude nice");
+    // } else {
+    //     console.log("Not nice");
+    // }
 
-    for (let i = 1; i <= 10; i++) {
-        console.log(i);
-    }
+    // Izveido ciklu (for), kurš izprintēs konsolē vērtības no [0; 24]
+    // < > = !  < =
+
+    // for (let i = 0; i <= 24; i++) {
+    //     console.log(i);
+    // }
+
+    // i iterācija, j iekšējais cikls...
+
+    window.onload = Main;
 })();
 
 // (function() {
